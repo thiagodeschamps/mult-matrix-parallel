@@ -24,3 +24,7 @@ Os trabalhos serão apresentados no período da manhã dos dias 26 a 29 / 4 / 20
 Boas pesquisas,
 
 Hélio
+
+# Interesting Links
+
+https://gist.github.com/nadavrot/5b35d44e8ba3dd718e595e40184d03f0
