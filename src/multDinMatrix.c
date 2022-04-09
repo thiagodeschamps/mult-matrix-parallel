@@ -4,8 +4,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define D 5
-#define MAX_VALUE 100
+#define D 1000
+#define MAX_VALUE 1000
 
 void randomize(int **matrix, int l){
 	
@@ -44,6 +44,10 @@ void mul_matrix(int **matrix_a, int **matrix_b, int **matrix_ab, int l){
 
 int main(int argc, char *argv[]){
 	
+    // Declaring variables to measure the time taken by the function
+    clock_t start, end;
+    double cpu_time_used;
+
     // Setting up seed to random function
 	srand(time(NULL));
 	
@@ -66,9 +70,13 @@ int main(int argc, char *argv[]){
 	randomize(matrix_a, D);
 	randomize(matrix_b, D);
 	
+    start = clock();
 	mul_matrix(matrix_a, matrix_b, matrix_ab_normal, D);
+    end = clock();
+
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;	
 	
-	print_matrix(matrix_a, D);
+    print_matrix(matrix_a, D);
 	print_matrix(matrix_b, D); 
 	print_matrix(matrix_ab_normal, D);
 	
@@ -84,6 +92,8 @@ int main(int argc, char *argv[]){
 		free(matrix_ab_normal[i]);
 	free(matrix_ab_normal);
 	
+    printf("time take by multpiplication: %f seconds\n", cpu_time_used);
+
 	return 0;
 	
 }
