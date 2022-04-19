@@ -67,10 +67,10 @@ int main(int argc, char *argv[]){
 	printf("time take by multiplication: %f seconds\n", cpu_time_used);
 	// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 	
-    print_matrix(matrix_a, D);
-	print_matrix(matrix_b, D);
-	print_matrix(matrix_t, D); 
-	print_matrix(matrix_ab_normal, D);
+    // print_matrix(matrix_a, D);
+	// print_matrix(matrix_b, D);
+	// print_matrix(matrix_t, D); 
+	// print_matrix(matrix_ab_normal, D);
 	
 	for(int i = 0; i < D; i++)
 		free(matrix_a[i]);
