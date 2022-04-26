@@ -33,7 +33,7 @@ https://gist.github.com/nadavrot/5b35d44e8ba3dd718e595e40184d03f0
 
 ##  Serial
 
-gcc -O2 -Wall -fopenmp multDinMatrixSerial.c && ./a.out 
+gcc -O2 -Wall multDinMatrixSerial.c && ./a.out 
 
 ## Parallel openMP
 
