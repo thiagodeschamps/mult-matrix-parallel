@@ -139,11 +139,11 @@ int main(int argc, char **argv)
 
 void randomize(double matrix[N][N], int l){
 	
-	int n;
+	double n;
 	
 	for(int i = 0; i < l; i++){
 		for(int j = 0; j < l; j++){
-			n = rand() % MAX_VALUE;
+			n = rand() % MAX_VALUE + 1.0;
 			matrix[i][j] = n;
 		}	
 	}
