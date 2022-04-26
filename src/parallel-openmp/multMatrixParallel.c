@@ -6,7 +6,7 @@
 #include <omp.h>
 
 
-#define D 3000
+#define D 1500
 #define MAX_VALUE 100
 
 void randomize(int **, int);
