@@ -4,13 +4,6 @@
 #include <time.h>
 #include <sys/time.h>
 
-/*
-  In here 'process o' which distribute the workload to other processes is considered
-  as Root (Master) process and other processes which do the computation is considered
-  as Slave task processes.
-*/
-
-// Number of rows and columnns in a matrix
 #define N 3000
 #define MAX_VALUE 10
 
@@ -19,7 +12,6 @@ void print_matrix(double[N][N], int);
 
 MPI_Status status;
 
-// Matrix holders are created
 double matrix_a[N][N], matrix_b[N][N], matrix_c[N][N];
 
 int main(int argc, char **argv)
@@ -107,7 +99,6 @@ int main(int argc, char **argv)
     MPI_Recv(&offset, 1, MPI_INT, source, 1, MPI_COMM_WORLD, &status);
     // O processo escravo recebe o numero de linhas enviado pelo processo mestre
     MPI_Recv(&rows, 1, MPI_INT, source, 1, MPI_COMM_WORLD, &status);
-    // The slave process receives the sub portion of the Matrix A which assigned by Root
     // O processo escravo recebera uma linha da matriz A, que sera atirbuida pelo Mestre
     MPI_Recv(&matrix_a, rows * N, MPI_DOUBLE, source, 1, MPI_COMM_WORLD, &status);
     // O processo escravo recebe a Matriz B
