@@ -4,8 +4,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define D 1500
-#define MAX_VALUE 100
+#define D 3000
+#define MAX_VALUE 10
 
 void randomize(int **, int);
 void print_matrix(int **, int);

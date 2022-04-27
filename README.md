@@ -38,3 +38,13 @@ gcc -O2 -Wall multDinMatrixSerial.c && ./a.out
 ## Parallel openMP
 
 gcc -O2 -Wall -fopenmp multMatrixParallel.c && ./a.out  
+
+## Parallel OpenMP
+
+installing MPI on ubuntu:
+sudo apt install mpich
+
+Run:
+mpicc matrixMPI.c -o matrix -Wall
+mpirun -np 2 ./matrix
+
